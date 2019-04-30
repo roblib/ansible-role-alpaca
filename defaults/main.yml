@@ -52,3 +52,8 @@ alpaca_blueprint_settings:
     derivative_service_url: http://localhost:8000/homarus/convert
     error_max_redeliveries: 5
     camel_context_id: IslandoraConnectorHomarus
+  - pid: ca.islandora.alpaca.connector.fits
+    in_stream: activemq:queue:islandora-connector-fits
+    derivative_service_url: http://localhost:8050/fits/process
+    error_max_redeliveries: 5
+    camel_context_id: IslandoraConnectorFits
